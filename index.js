@@ -6,7 +6,12 @@ if(process.argv.length < 4){
     process.exit(1);
 }
 const mode = process.argv[2];
-const input = process.argv.slice(3).join(' ')
+const input = process.argv[3];
+
+if (!mode || !input){
+    console.error('Provide MODE= and INPUT=');
+    process.exit(1);
+}
 
 /**
  * Usage: you have to provide to terminal node ./index.js and then the filepath
